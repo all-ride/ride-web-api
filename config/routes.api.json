@@ -1,0 +1,34 @@
+{
+    "routes": [
+        {
+            "path": "/",
+            "controller": "ride\\web\\api\\controller\\ApiController",
+            "action": "indexAction",
+            "methods": ["HEAD", "GET"],
+            "id": "api"
+        },
+        {
+            "path": "/namespace",
+            "dynamic": true,
+            "controller": "ride\\web\\api\\controller\\ApiController",
+            "action": "namespaceAction",
+            "methods": ["HEAD", "GET"],
+            "id": "api.namespace"
+        },
+        {
+            "path": "/class",
+            "dynamic": true,
+            "controller": "ride\\web\\api\\controller\\ApiController",
+            "action": "classAction",
+            "methods": ["HEAD", "GET"],
+            "id": "api.class"
+        },
+        {
+            "path": "/search",
+            "controller": "ride\\web\\api\\controller\\ApiController",
+            "action": "searchAction",
+            "methods": ["HEAD", "GET", "POST"],
+            "id": "api.search"
+        }
+    ]
+}
