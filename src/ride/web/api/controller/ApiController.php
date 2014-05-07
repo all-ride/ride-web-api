@@ -28,7 +28,7 @@ class ApiController extends AbstractController {
 
     /**
      * Constructs a new API controller
-     * @param ride\library\api\ApiBrowser $apiBrowser
+     * @param \ride\library\api\ApiBrowser $apiBrowser
      * @return null
      */
     public function __construct(ApiBrowser $apiBrowser) {
@@ -171,7 +171,7 @@ class ApiController extends AbstractController {
      * @param array $variables
      * @param string $namespace
      * @param string $class
-     * @return ride\library\mvc\view\View
+     * @return \ride\library\mvc\view\View
      */
     protected function setView($template, array $variables = array(), $namespace = null, $class = null) {
         $translator = $this->getTranslator();
