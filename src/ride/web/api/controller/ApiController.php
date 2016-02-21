@@ -192,7 +192,7 @@ class ApiController extends AbstractController {
         $variables['urlNamespace'] = $this->urlNamespace;
         $variables['urlClass'] = $this->urlClass;
         $variables['breadcrumbs'] = array(
-        	$this->getUrl('api') =>  $translator->translate('title.api'),
+            (string) $this->getUrl('api') => $translator->translate('title.api'),
         );
 
         if ($namespace) {
@@ -209,7 +209,7 @@ class ApiController extends AbstractController {
                 $variables['breadcrumbs'][$this->urlClass . $namespace . '/' . $class] = $class;
             }
         } elseif ($template == 'api/search') {
-            $variables['breadcrumbs'][$this->getUrl('api.search')] = $translator->translate('title.search');
+            $variables['breadcrumbs'][(string) $this->getUrl('api.search')] = $translator->translate('title.search');
         }
 
         $this->setTemplateView($template, $variables);
