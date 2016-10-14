@@ -2,7 +2,6 @@
     "name": "ride/web-api",
     "description": "API browser of a Ride web application.",
     "license": "MIT",
-    "version": "0.1.2",
     "authors": [
         {
             "name": "Joris Vandeweerd",
@@ -10,14 +9,16 @@
         }
     ],
     "require": {
-        "ride/app-api": ">=0.1.0",
-        "ride/lib-api": ">=0.1.0",
-        "ride/lib-http": ">=0.3.0",
-        "ride/web-base": ">=0.1.0"
+        "ride/app": "^1.0.0",
+        "ride/app-api": "^1.0.0",
+        "ride/lib-api": "^1.0.0",
+        "ride/lib-http": "^1.0.0",
+        "ride/web": "^1.0.0",
+        "ride/web-base": "^1.0.0"
     },
     "autoload": {
         "psr-0": {
             "ride\\web\\api\\controller\\": ["src/"]
         }
-    }    
+    }
 }
