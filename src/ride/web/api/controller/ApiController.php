@@ -138,9 +138,10 @@ class ApiController extends AbstractController {
         if ($searchQuery) {
             $searchClasses = $this->apiBrowser->getClassesForNamespace(null, true, $searchQuery);
             if (count($searchClasses) == 1) {
-                $searchClasses = each($searchClasses);
+                $keysSearchClasses = array_keys($searchClasses);
+                $searchClass = array_shift($keysSearchClasses);
 
-                $this->response->setRedirect($this->urlClass . '/' . $searchClasses['key']);
+                $this->response->setRedirect($this->urlClass . '/' . $searchClass);
 
                 return;
             }
